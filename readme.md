@@ -138,53 +138,5 @@ Abaixo estão exemplos de como os eventos podem ser exibidos:
 
 ### Exemplo de grelha (3 colunas)
 
-<div class="container my-4">
-  <div class="row g-4">
-	<div class="col-md-4">
-	  <div class="card h-100 text-center">
-		<div class="card-img-top" style="height:150px; background:#ccc; display:flex; align-items:center; justify-content:center;">
-		  Imagem
-		</div>
-		<div class="card-body">
-		  <h5 class="card-title">Evento 1</h5>
-		  <p class="card-text">
-			<strong>Data:</strong> 10/09<br>
-			<strong>Local:</strong> Lisboa<br>
-			<strong>Organizador:</strong> ABC
-		  </p>
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="card h-100 text-center">
-		<div class="card-img-top" style="height:150px; background:#ccc; display:flex; align-items:center; justify-content:center;">
-		  Imagem
-		</div>
-		<div class="card-body">
-		  <h5 class="card-title">Evento 2</h5>
-		  <p class="card-text">
-			<strong>Data:</strong> 12/09<br>
-			<strong>Local:</strong> Porto<br>
-			<strong>Organizador:</strong> DEF
-		  </p>
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="card h-100 text-center">
-		<div class="card-img-top" style="height:150px; background:#ccc; display:flex; align-items:center; justify-content:center;">
-		  Imagem
-		</div>
-		<div class="card-body">
-		  <h5 class="card-title">Evento 3</h5>
-		  <p class="card-text">
-			<strong>Data:</strong> 15/09<br>
-			<strong>Local:</strong> Faro<br>
-			<strong>Organizador:</strong> GHI
-		  </p>
-		</div>
-	  </div>
-	</div>
-  </div>
-</div>
+![Exemplo de grelha](screenshots/exemplo-grelha.png)
 
