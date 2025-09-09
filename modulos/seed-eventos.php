@@ -29,7 +29,31 @@ https://slipsum.com",
 
 		// Preencher campos ACF Pro
 		if (function_exists('update_field')) {
-			update_field('data_do_evento', date('Y-m-d', strtotime("+$i days")), $post_id);
+			// update_field('data_do_evento', date('Y-m-d', strtotime("+$i days")), $post_id);
+
+			// Data do evento (ACF)
+			$data_evento = date('Y-m-d', strtotime("+$i days"));
+
+			// Hora fixa 10:00 e minutos incrementais (passado/presente)
+			$hour = 10;
+			$minute = $i * 10;
+			$post_date = date('Y-m-d H:i:s', strtotime(date('Y-m-d') . " $hour:$minute:00"));
+
+			// Atualiza ACF
+			if (function_exists('update_field')) {
+				update_field('data_do_evento', $data_evento, $post_id);
+				update_field('local', 'Local ' . ($i + 1), $post_id);
+				update_field('organizador', 'Organizador ' . ($i + 1), $post_id);
+			}
+
+			// Atualiza post_date no WordPress e força publish
+			wp_update_post([
+				'ID' => $post_id,
+				'post_date' => $post_date,
+				'post_date_gmt' => get_gmt_from_date($post_date),
+				'post_status' => 'publish' // força já publicado
+			]);
+
 			update_field('local', 'Local ' . ($i + 1), $post_id);
 			update_field('organizador', 'Organizador ' . ($i + 1), $post_id);
 		}

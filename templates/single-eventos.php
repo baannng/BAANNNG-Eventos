@@ -57,17 +57,41 @@ while (have_posts()) : the_post();
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 1rem;
+	font-size: 10px;
+	text-transform: uppercase;
 }
 
-.evento-nav a,
-.evento-back {
+.evento-nav a {
 	color: #000;
 	text-decoration: none;
 }
 
+.evento-nav a:hover {
+	color: #777;
+}
+
 .evento-back {
-	display: inline-block;
+	display: flex;
+	justify-content: center;
 	margin-top: 1rem;
+	font-weight: 600;
+}
+
+.evento-back a {
+	color: #000;
+	font-size: 9px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.evento-back a:hover {
+	color: #777;
+}
+
+.nav-previous, .nav-next {
+	border: 1px solid gray;
+	padding: 2px 10px;
+	border-radius: 25px;
 }
 </style>
 
@@ -83,19 +107,27 @@ while (have_posts()) : the_post();
 		<div class="evento-content"><?php the_content(); ?></div>
 
 		<div class="evento-nav">
-			<div>
-				<?php if ($prev_post) : ?>
-					<a href="<?php echo get_permalink($prev_post->ID); ?>">&laquo; Evento anterior</a>
-				<?php endif; ?>
+			<div class="nav-previous">
+				<?php
+				$prev = get_adjacent_post(false, '', true);
+				if ($prev && $prev->post_type === 'eventos') {
+					echo '<a href="' . get_permalink($prev->ID) . '">← Evento Anterior</a>';
+				}
+				?>
 			</div>
-			<div>
-				<?php if ($next_post) : ?>
-					<a href="<?php echo get_permalink($next_post->ID); ?>">Próximo evento &raquo;</a>
-				<?php endif; ?>
+			<div class="nav-next">
+				<?php
+				$next = get_adjacent_post(false, '', false);
+				if ($next && $next->post_type === 'eventos') {
+					echo '<a href="' . get_permalink($next->ID) . '">Próximo Evento →</a>';
+				}
+				?>
 			</div>
 		</div>
 
-		<a class="evento-back" href="<?php echo get_permalink(get_option('eventos_plugin_page_created')); ?>">← Voltar a todos os eventos</a>
+		<div class="evento-back">
+			 <a href="<?php echo site_url('/todos-os-eventos'); ?>">-- Voltar a todos os eventos --</a>
+		</div>
 	</div>
 </div>
 

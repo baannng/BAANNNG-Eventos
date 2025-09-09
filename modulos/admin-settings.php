@@ -59,7 +59,7 @@ function eventos_plugin_settings_page() {
 				<input type="submit" name="submit" class="button button-primary" value="Guardar Alterações">
 			</p>
 		</form>
-		<p>Para temas FSE, use o bloco Gutenberg <strong>"Menu de Eventos"</strong> para inserir listas de eventos.</p>
+		<p>Para temas FSE, use o bloco Gutenberg <strong>"Menu BNGEv"</strong> no Editor do Tema.</p>
 		<p>Para temas clássicos, adicione a página “Todos os Eventos” ao menu via Appearance → Menus.</p>
 	</div>
 	<?php

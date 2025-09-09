@@ -23,6 +23,19 @@ require_once $modulos_dir . 'loader.php';        // Loader com CPT, ACF e shortc
 require_once $modulos_dir . 'desativar.php';     // Limpeza ao desativar
 
 // ------------------------------
+// Registrar bloco de menu do cabeçalho (FSE)
+// ------------------------------
+add_action('init', function() {
+	if (function_exists('register_block_type_from_metadata')) {
+		register_block_type_from_metadata(plugin_dir_path(__FILE__) . 'blocks/menu-cabecalho');
+	}
+});
+
+
+
+
+
+// ------------------------------
 // Registrar hook de desativação
 // ------------------------------
 register_deactivation_hook(__FILE__, 'eventos_plugin_handle_deactivate');

@@ -31,7 +31,7 @@ add_action('admin_notices', function() {
 			delete_transient('eventos_plugin_seeded_posts');
 		}
 
-		echo 'Para temas FSE, use o bloco Gutenberg <strong>"Menu de Eventos"</strong> para inserir a lista de eventos.<br>';
+		echo 'Para temas FSE, aplique o bloco Gutenberg <strong>"Menu BNGEv"</strong> no Editor do Tema.<br>';
 		echo 'Para temas clássicos, adicione a página ao menu via Appearance → Menus.';
 		echo '</p></div>';
 	}

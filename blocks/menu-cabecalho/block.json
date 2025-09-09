@@ -1,0 +1,22 @@
+{
+  "apiVersion": 2,
+  "name": "eventos/menu-cabecalho",
+  "title": "Menu BNGEv",
+  "category": "widgets",
+  "icon": "admin-links",
+  "supports": {
+    "html": false,
+    "inserter": true
+  },
+  "attributes": {
+    "align": { "type": "string", "default": "left" },
+    "links": {
+      "type": "array",
+      "default": [
+        { "label": "Todos os Eventos", "url": "/todos-os-eventos" }
+      ]
+    }
+  },
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php"
+}
