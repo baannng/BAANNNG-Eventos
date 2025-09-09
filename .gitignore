@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Node / NPM (se usares)
+node_modules/
+
+# WordPress
+wp-content/uploads/
+wp-config.php
