@@ -82,6 +82,37 @@ O **Eventos Plugin** permite gerir e apresentar eventos no WordPress de forma si
 
 ---
 
+## Notas sobre a estrutura
+
+    - assets/: imagens .jpg carregadas automaticamente na biblioteca de multimédia.
+    - modulos/: contém toda a lógica do plugin, incluindo CPT, shortcodes, seed, upload de imagens, settings, admin notice e enqueue.
+    - blocks/: bloco Gutenberg “Menu de Eventos” compatível com FSE.
+    - templates/: template single para os eventos.
+    - loader.php: centraliza todos os require_once dos módulos, simplificando o eventos-plugin.php.
+    - admin-settings.php: controla checkboxes de limpeza ao desativar e ao eliminar.
+    - desativar.php e uninstall.php: executam a limpeza condicionalmente, apenas se as opções estiverem ativadas.
+
+---
+
+## Exemplos visuais
+
+    Abaixo estão exemplos de como os eventos podem ser exibidos:
+
+    - **Todos os Eventos** (grelha de 3 colunas)
+    - Cada evento mostra:
+      - Imagem de destaque
+      - Título
+      - Data
+      - Local
+      - Organizador
+      - Conteúdo
+
+    ### Exemplo de grelha (3 colunas)
+
+    ![Exemplo de grelha](screenshots/exemplo-grelha.png)
+
+---
+
 ## Estrutura final do plugin
 
 ```text
@@ -108,31 +139,3 @@ eventos-plugin/
     ├── loader.php                    ← require centralizado de módulos
     ├── seed-eventos.php              ← seed de 6 posts de eventos de simulação
     └── shortcode.php                 ← shortcodes [eventos_todos], [eventos_futuros]
-text```
-
----
-
-## Notas sobre a estrutura
-
-    - `assets/`: imagens `.jpg` carregadas automaticamente na biblioteca de multimédia
-    - `modulos/`: contém toda a lógica do plugin
-    ...
-
----
-
-## Exemplos visuais
-
-    Abaixo estão exemplos de como os eventos podem ser exibidos:
-
-    - **Todos os Eventos** (grelha de 3 colunas)
-    - Cada evento mostra:
-      - Imagem de destaque
-      - Título
-      - Data
-      - Local
-      - Organizador
-      - Conteúdo
-
-    ### Exemplo de grelha (3 colunas)
-
-    ![Exemplo de grelha](screenshots/exemplo-grelha.png)
