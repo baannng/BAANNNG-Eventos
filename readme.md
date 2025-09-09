@@ -100,16 +100,16 @@ O **Eventos Plugin** permite gerir e apresentar eventos no WordPress de forma si
 
     - **Todos os Eventos** (grelha de 3 colunas)
     - Cada evento mostra:
-      - Imagem de destaque
-      - Título
-      - Data
-      - Local
-      - Organizador
-      - Conteúdo
+    - Imagem de destaque
+    - Título
+    - Data
+    - Local
+    - Organizador
+    - Conteúdo
 
-    ### Exemplo de grelha (3 colunas)
+## Exemplo de grelha (3 colunas)
 
-    ![Exemplo de grelha](screenshots/exemplo-grelha.png)
+![Exemplo de grelha](screenshots/exemplo-grelha.png)
 
 ---
 
