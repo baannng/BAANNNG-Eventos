@@ -1,5 +1,17 @@
 # Changelog - Eventos Plugin
 
+## [1.3.0] - Novas funcionalidades e melhorias
+- Correção da navegação entre posts de eventos criados pelo seeder.
+- Ajuste do layout dos cards no shortcode `[eventos_todos]`:
+  - Imagens centralizadas, cropped e com padding.
+  - Cards mais estreitos e espaçamento correto entre linhas.
+  - Shadow mais consistente nos cards.
+- Menu BNGEv para cabeçalho:
+  - Menu horizontal editável via admin (adicionar/remover links).
+  - Funciona em qualquer header, independentemente do tema.
+  - Nota: poderá não aparecer automaticamente em todos os temas; pode ser necessário chamar `bngev_menu_render()` no template do header.
+- Pequenas melhorias de CSS e responsividade.
+
 ## [1.2.0] - Release atual
 - Sistema completo de admin settings (limpeza ao desativar ou uninstall).
 - Implementação do `uninstall.php`.

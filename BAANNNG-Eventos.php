@@ -3,7 +3,7 @@
  * Plugin Name: BAANNNG · Eventos
  * Plugin URI: https://baannng.com
  * Description: Sistema de gestão de eventos (com ACF) criado como parte do desafio da LBC. Uso restrito.
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author: Abel Pinto
  * Author URI: https://baannng.com
  * License: Proprietary
